@@ -3,44 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home IoT | Bagus Arda V.A.</title>
+    <title>Smart Home IoT | Bagus Arda</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        .swiper {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 320px; /* Lebar gambar utama yang nimpa di depan */
+            height: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .swiper-pagination-bullet-active {
+            background: #2dd4bf !important;
+        }
+    </style>
 </head>
 <body class="bg-slate-900 text-slate-100 p-5 md:p-10">
     <div class="max-w-4xl mx-auto">
-        <a href="index.html#projects" class="text-teal-400 hover:underline mb-6 inline-block font-bold">← Kembali ke Home</a>
+        <a href="index.html#projects" class="text-teal-400 hover:underline mb-6 inline-block font-bold">Home</a>
         
         <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl">
-            <!-- Ganti src dengan file foto asli lo -->
-            <img src="foto-iot.jpg" alt="Proyek IoT" class="w-full h-80 object-cover rounded-lg mb-8 shadow-lg">
+            
+            <!-- ====== STACKED CAROUSEL SECTION ====== -->
+            <div class="swiper mySwiper mb-8">
+                <div class="swiper-wrapper">
+                    <!-- Gambar 1 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <img src="skematik.jpg" alt="Rangkaian Skematik" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <img src="lampu-nyala.jpg" alt="Pengujian Lampu Nyala" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <img src="blynk-monitor.jpg" alt="Monitoring Blynk" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- Titik Navigasi -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- ====================================== -->
 
             <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Smart Home IoT: Voice Control & Energy Monitoring</h1>
             <p class="text-slate-300 mb-6 leading-relaxed">
-                Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>. 
-                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat.
+                Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>[cite: 1]. 
+                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan sensor ZMPT101B dan ACS712[cite: 1].
             </p>
             
             <div class="grid md:grid-cols-2 gap-6">
                 <div>
                     <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Kontrol lampu via perintah suara (IFTTT Integration)</li>
-                        <li>Monitoring parameter listrik (V, I, P) di aplikasi Blynk</li>
-                        <li>Tampilan data *real-time* via LCD 16x2</li>
-                        <li>Kontrol manual via aplikasi mobile</li>
+                        <li>Kontrol lampu via perintah suara (IFTTT Integration)[cite: 1]</li>
+                        <li>Monitoring parameter listrik (V, I, P) di aplikasi Blynk[cite: 1]</li>
+                        <li>Tampilan data *real-time* via LCD 16x2[cite: 1]</li>
+                        <li>Kontrol manual via aplikasi mobile[cite: 1]</li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
-                        <li>Sensors: ZMPT101B (Voltage) & ACS712 (Current)</li>
-                        <li>Platforms: Blynk IoT, IFTTT, Google Home</li>
-                        <li>Languages: C++ (Arduino IDE)</li>
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)[cite: 1]</li>
+                        <li>Sensors: ZMPT101B (Voltage) & ACS712 (Current)[cite: 1]</li>
+                        <li>Platforms: Blynk IoT, IFTTT, Google Home[cite: 1]</li>
+                        <li>Languages: C++ (Arduino IDE)[cite: 1]</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Swiper.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "creative", /* Pake Creative Effect biar bisa kustom tumpukan */
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    // Geser ke kiri (translate X), mundur ke belakang (translate Z), pudar (opacity)
+                    translate: ["-85%", 0, -200], 
+                    opacity: 0.3, /* Kiri pudar banget */
+                },
+                next: {
+                    shadow: true,
+                    // Geser ke kanan (translate X), mundur ke belakang (translate Z), pudar (opacity)
+                    translate: ["85%", 0, -200], 
+                    opacity: 0.3, /* Kanan pudar banget */
+                },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>
