@@ -31,24 +31,24 @@
 </head>
 <body class="bg-slate-900 text-slate-100 p-5 md:p-10">
     <div class="max-w-4xl mx-auto">
-        <a href="index.html#projects" class="text-teal-400 hover:underline mb-6 inline-block font-bold">Home</a>
+        <a href="index.html#projects" class="text-teal-400 hover:underline mb-6 inline-block font-bold">← Kembali ke Home</a>
         
         <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
                 <div class="swiper-wrapper">
-                    <!-- Gambar 1 -->
+                    <!-- Gambar 1: Rangkaian Skematik -->
                     <div class="swiper-slide border border-slate-600">
-                        <img src="iot1.jpg" alt="Rangkaian Skematik" class="w-full h-full object-cover">
+                        <img src="assets/iot1.jpg" alt="Rangkaian Skematik" class="w-full h-full object-cover">
                     </div>
-                    <!-- Gambar 2 -->
+                    <!-- Gambar 2: Pengujian Lampu Nyala -->
                     <div class="swiper-slide border border-slate-600">
-                        <img src="iot2.jpg" alt="Pengujian Lampu Nyala" class="w-full h-full object-cover">
+                        <img src="assets/iot2.jpg" alt="Pengujian Lampu Nyala" class="w-full h-full object-cover">
                     </div>
-                    <!-- Gambar 3 -->
+                    <!-- Gambar 3: Monitoring Blynk -->
                     <div class="swiper-slide border border-slate-600">
-                        <img src="iot3" alt="Monitoring Blynk" class="w-full h-full object-cover">
+                        <img src="assets/iot3.jpg" alt="Monitoring Blynk" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <!-- Titik Navigasi -->
@@ -58,29 +58,40 @@
 
             <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Smart Home IoT: Voice Control & Energy Monitoring</h1>
             <p class="text-slate-300 mb-6 leading-relaxed">
-                Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>. 
-                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan sensor ZMPT101B dan ACS712.
+                Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>[cite: 1]. 
+                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan kombinasi sensor ZMPT101B dan ACS712[cite: 1].
             </p>
             
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
                     <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Kontrol lampu via perintah suara (IFTTT Integration)</li>
-                        <li>Monitoring parameter listrik (V, I, P) di aplikasi Blynk</li>
-                        <li>Tampilan data *real-time* via LCD 16x2</li>
-                        <li>Kontrol manual via aplikasi mobile</li>
+                        <li>Kontrol lampu via perintah suara (IFTTT & Google Assistant)[cite: 1]</li>
+                        <li>Monitoring parameter listrik (V, I, P) di aplikasi mobile Blynk[cite: 1]</li>
+                        <li>Tampilan data lokal *real-time* via LCD 16x2[cite: 1]</li>
+                        <li>Kontrol manual *override* via aplikasi Blynk[cite: 1]</li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
-                        <li>Sensors: ZMPT101B (Voltage) & ACS712 (Current)</li>
-                        <li>Platforms: Blynk IoT, IFTTT, Google Home</li>
-                        <li>Languages: C++ (Arduino IDE)</li>
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)[cite: 1]</li>
+                        <li>Sensors: ZMPT101B (Voltage) & ACS712 (Current)[cite: 1]</li>
+                        <li>Platforms: Blynk IoT, IFTTT, Google Home[cite: 1]</li>
+                        <li>Languages: C++ (Arduino IDE)[cite: 1]</li>
                     </ul>
                 </div>
+            </div>
+
+            <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+            <div class="border-t border-slate-700 pt-6 mt-6">
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis:</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Sistem otomatisasi ini menggunakan platform <strong>IFTTT</strong> sebagai perantara web request (Webhooks API) ketika menerima *trigger* perintah suara dari Google Assistant, yang kemudian diteruskan langsung ke server Blynk Cloud untuk mengubah *state* relay pada pin D5 Wemos D1 Mini[cite: 1]. 
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Untuk kalkulasi daya, data analog dari sensor arus dan tegangan diproses menggunakan modul ADC ADS1115 guna menjamin resolusi pembacaan data yang lebih presisi sebelum dikirimkan ke dashboard Blynk IoT[cite: 1].
+                </p>
             </div>
         </div>
     </div>
@@ -89,28 +100,28 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-        effect: "creative",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        loop: false, /* FIX: Matiin loop-nya biar kaga unlimited sebelah! */
-        creativeEffect: {
-            prev: {
-                shadow: true,
-                translate: ["-85%", 0, -200], 
-                opacity: 0.3,
+            effect: "creative",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: false,
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ["-85%", 0, -200], 
+                    opacity: 0.3,
+                },
+                next: {
+                    shadow: true,
+                    translate: ["85%", 0, -200], 
+                    opacity: 0.3,
+                },
             },
-            next: {
-                shadow: true,
-                translate: ["85%", 0, -200], 
-                opacity: 0.3,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+        });
     </script>
 </body>
 </html>
