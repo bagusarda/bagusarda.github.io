@@ -40,15 +40,21 @@
                 <div class="swiper-wrapper">
                     <!-- Gambar 1: Rangkaian Skematik -->
                     <div class="swiper-slide border border-slate-600">
-                        <img src="Assets/iot1.jpg" alt="Rangkaian Skematik" class="w-full h-full object-cover">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/iot1.jpg" alt="Rangkaian Skematik" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <!-- Gambar 2: Pengujian Lampu Nyala -->
                     <div class="swiper-slide border border-slate-600">
-                        <img src="Assets/iot2.jpg" alt="Pengujian Lampu Nyala" class="w-full h-full object-cover">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/iot2.jpg" alt="Pengujian Lampu Nyala" class="w-full h-full object-cover">
+                        </div>
                     </div>
                     <!-- Gambar 3: Monitoring Blynk -->
                     <div class="swiper-slide border border-slate-600">
-                        <img src="Assets/iot3.jpg" alt="Monitoring Blynk" class="w-full h-full object-cover">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/iot3.jpg" alt="Monitoring Blynk" class="w-full h-full object-cover">
+                        </div>
                     </div>
                 </div>
                 <!-- Titik Navigasi -->
@@ -105,6 +111,7 @@
             centeredSlides: true,
             slidesPerView: "auto",
             loop: false,
+            zoom: true,
             creativeEffect: {
                 prev: {
                     shadow: true,
