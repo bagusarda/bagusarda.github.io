@@ -331,7 +331,7 @@
                     <!-- Gambar 3 -->
                     <div class="swiper-slide border border-slate-600">
                         <div class="swiper-zoom-container">
-                            <img src="Assets/dht_webpage.png" alt="Local Webpage Interface" class="w-full h-full object-cover">
+                            <img src="Assets/dht_web.png" alt="Local Webpage Interface" class="w-full h-full object-cover">
                         </div>
                     </div>
                     <!-- Gambar 4 -->
@@ -471,8 +471,8 @@
             </div>
         </div>
 
-        <!-- ====== PROYEK 6: ULTRASONIC RANGE METER VIA BLYNK IOT ====== -->
-        <div id="ultrasonic" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+        <!-- ====== PROYEK 6: SMARTPLUG MONITORING KLENIK ====== -->
+        <div id="smartplug" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
@@ -480,25 +480,7 @@
                     <!-- Gambar 1 -->
                     <div class="swiper-slide border border-slate-600">
                         <div class="swiper-zoom-container">
-                            <img src="Assets/ultrasonic_skema.png" alt="Rangkaian Skematik Ultrasonik" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <!-- Gambar 2 -->
-                    <div class="swiper-slide border border-slate-600">
-                        <div class="swiper-zoom-container">
-                            <img src="Assets/ultrasonic_alat.jpg" alt="Pengujian Alat Fisik Ultrasonik" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <!-- Gambar 3 -->
-                    <div class="swiper-slide border border-slate-600">
-                        <div class="swiper-zoom-container">
-                            <img src="Assets/ultrasonic_blynk.jpg" alt="Dashboard Gauge Blynk IoT" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    <!-- Gambar 4 -->
-                    <div class="swiper-slide border border-slate-600">
-                        <div class="swiper-zoom-container">
-                            <img src="Assets/ultrasonic_serial.png" alt="Log Data Serial Monitor" class="w-full h-full object-cover">
+                            <img src="Assets/Screenshot (142).png" alt="Dashboard Klenik Smartplug" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -507,41 +489,41 @@
             </div>
             <!-- ====================================== -->
 
-            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">IoT-Based Non-Contact Distance Measurement via Ultrasonic Sensor</h1>
+            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Custom Smartplug Power Monitoring & Actuation (OpenBeken)</h1>
             <p class="text-slate-300 mb-6 leading-relaxed">
-                Proyek ini mengimplementasikan sistem pengukuran jarak tanpa kontak (non-contact distance measurement) berbasis Internet of Things (IoT) memanfaatkan sensor ultrasonik HC-SR04 dan mikrokontroler Wemos D1 Mini (ESP8266). Sistem dirancang untuk melakukan kalkulasi jarak pantul gelombang secara real-time, di mana visualisasi data interaktif dikirimkan secara berkala ke aplikasi mobile Blynk IoT dalam bentuk tampilan grafik Gauge.
+                Proyek ini berfokus pada modifikasi (reverse engineering) perangkat smartplug komersial agar dapat dipantau dan dikendalikan menggunakan ekosistem IoT kustom. Melalui proses flashing firmware ke OpenBeken (OBK), data kelistrikan vital seperti tegangan, daya, dan arus divisualisasikan secara real-time melalui Klenik Dashboard (klenik.ichibot.id).
             </p>
             
             <div class="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                    <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Sistem:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Pengukuran jarak objek secara real-time dengan akurasi tinggi berbasis gelombang suara.</li>
-                        <li>Transmisi data nirkabel berskala global via Wi-Fi core ESP8266 ke server Blynk Cloud.</li>
-                        <li>Visualisasi interaktif jarak ukur menggunakan widget Gauge dengan rentang batas 0-4000 cm.</li>
-                        <li>Integrasi arsitektur pin virtual terdedikasi pada Virtual Pin V0 Blynk.</li>
+                        <li>Real-time telemetry kelistrikan (Tegangan, Arus, Daya).</li>
+                        <li>Remote control aktuasi (On/Off) via dashboard.</li>
+                        <li>Log aktivitas state smartplug secara real-time.</li>
+                        <li>Custom firmware tanpa limitasi cloud bawaan pabrik.</li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack & Tools:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
-                        <li>Sensors: HC-SR04 Ultrasonic Range Sensor</li>
-                        <li>Pin Interface: Trig Pin (GPIO D5) & Echo Pin (GPIO D6)</li>
-                        <li>Platforms & Widgets: Blynk IoT Console & Mobile Gauge Interface</li>
-                        <li>Languages: C++ (Arduino IDE)</li>
+                        <li>Platform: Klenik Dashboard (klenik.ichibot.id)</li>
+                        <li>Firmware: OpenBeken (OBK)</li>
+                        <li>Protocol & Broker: MQTT (mqtt.ichibot.id)</li>
+                        <li>Hardware: Smartplug Komersial (ESP/BK7231 based)</li>
+                        <li>Flashing Method: Komunikasi Serial UART (TX/RX)</li>
                     </ul>
                 </div>
             </div>
 
             <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
             <div class="border-t border-slate-700 pt-6 mt-6">
-                <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis Telemetri:</h2>
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Implementasi & Analisis Modifikasi:</h2>
                 <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                    Sistem bekerja dengan memicu pin digital D5 (Trig) untuk memancarkan pulsa ultrasonik berfrekuensi tinggi selama 10 mikrodetik. Gelombang suara yang memantul kembali setelah menabrak objek di depannya akan ditangkap oleh pin digital D6 (Echo). Mikrokontroler kemudian menghitung durasi waktu tempuh gelombang menggunakan fungsi pulseIn() untuk dikonversi ke dalam satuan centimeter (cm) melalui konstanta kecepatan suara.
+                    Tantangan utama dalam proyek ini berada pada tahap modifikasi hardware. Smartplug harus dibongkar secara fisik untuk mengakses pinout UART (TX, RX, VCC, GND) guna menimpa firmware bawaan pabrik dengan OpenBeken menggunakan USB to TTL adapter. Penggunaan OpenBeken memungkinkan perangkat keras murah berbasis chipset seperti BK7231 untuk lepas dari ketergantungan cloud aslinya dan terintegrasi penuh ke server lokal atau kustom.
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Data numerik hasil kalkulasi jarak aktual tersebut secara simultan dikirim setiap detik menuju Blynk Cloud menggunakan fungsi Blynk.virtualWrite(V0). Widget Gauge pada aplikasi Android akan secara dinamis memperbarui jarum indikator visual sesuai fluktuasi jarak objek yang terdeteksi, menyediakan fungsi pemantauan jarak jauh yang andal untuk kebutuhan sistem deteksi level air, parkir mandiri, maupun perimeter keamanan.
+                    Setelah proses flashing berhasil, tahapan krusial selanjutnya adalah melakukan konfigurasi MQTT Topic pada firmware agar perangkat dapat berkomunikasi lancar dengan server mqtt.ichibot.id. Data payload yang dikirimkan kemudian di-*parsing* oleh Klenik Dashboard untuk ditampilkan dalam bentuk gauge metrik dan antarmuka switch, menghasilkan sistem kendali kelistrikan berlatensi rendah yang sepenuhnya independen.
                 </p>
             </div>
         </div>
