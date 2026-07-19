@@ -342,6 +342,162 @@
                 </p>
             </div>
         </div>
+
+        <!-- ====== PROYEK 5: KONTROL WARNA LED RGB VIA BLYNK IOT (PWM) ====== -->
+        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+            
+            <!-- ====== STACKED CAROUSEL SECTION ====== -->
+            <div class="swiper mySwiper mb-8">
+                <div class="swiper-wrapper">
+                    <!-- Gambar 1 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/rgb_skema.png" alt="Rangkaian Skematik RGB" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/rgb_blynk.jpg" alt="Antarmuka Widget zeRGBa Blynk" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/rgb_red.jpg" alt="Pengujian Aktuasi Warna Merah" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 4 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/rgb_green.jpg" alt="Pengujian Aktuasi Warna Hijau" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 5 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/rgb_blue.jpg" alt="Pengujian Aktuasi Warna Biru" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Titik Navigasi -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- ====================================== -->
+
+            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">IoT-Based RGB LED Actuation via Blynk zeRGBa Protocol</h1>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+                Proyek ini mengimplementasikan sistem kendali pencampuran warna dinamis secara nirkabel memanfaatkan modul mikrokontroler Wemos D1 Mini (ESP8266) dan modul LED RGB. Dengan memanfaatkan fitur modulasi lebar pulsa atau Pulse Width Modulation (PWM), pengguna dapat mengonfigurasi jutaan variasi kombinasi warna secara real-time dari jarak jauh melalui interwajah widget zeRGBa pada aplikasi mobile Blynk IoT.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Kontrol spektrum warna LED RGB secara real-time via koneksi internet.</li>
+                        <li>Integrasi parsing data string menggunakan widget zeRGBa Advanced Mode.</li>
+                        <li>Kendali tingkat intensitas kecerahan pin warna individual skala 0-255.</li>
+                        <li>Penerapan pensinyalan analogWrite (PWM) pada multi-channel GPIO digital.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
+                        <li>Actuators: 1x Common Cathode RGB LED Module</li>
+                        <li>Hardware Interface: 3x Resistor Pembatas Arus</li>
+                        <li>Platforms & Widgets: Blynk IoT Cloud & zeRGBa String Array</li>
+                        <li>Languages: C++ (Arduino IDE Core)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+            <div class="border-t border-slate-700 pt-6 mt-6">
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis Modulasi:</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Sistem bekerja melalui interupsi fungsi BLYNK_WRITE(V0) yang mendengarkan perubahan koordinat warna pada dashboard mobile. Nilai parameter warna primer utama (Red, Green, Blue) dikirimkan oleh server Blynk dalam satu kesatuan array string terkompresi. Pustaka program kemudian melakukan ekstraksi token teks tersebut menjadi variabel bilangan bulat terpisah dengan rentang batas intensitas fungsional antara level 0 hingga 255.
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Data numerik hasil ekstraksi tersebut kemudian dieksekusi oleh perintah analogWrite() untuk memodifikasi siklus kerja (duty cycle) pulsa digital pada pin fisik D5, D6, dan D7 secara simultan. Perubahan lebar pulsa ini mengatur tingkat catu arus rata-rata yang mengalir pada elemen anoda masing-masing warna, menghasilkan perpaduan pendaran cahaya warna baru pada kubah LED fisik secara presisi dan responsif.
+                </p>
+            </div>
+        </div>
+
+        <!-- ====== PROYEK 6: ULTRASONIC RANGE METER VIA BLYNK IOT ====== -->
+        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+            
+            <!-- ====== STACKED CAROUSEL SECTION ====== -->
+            <div class="swiper mySwiper mb-8">
+                <div class="swiper-wrapper">
+                    <!-- Gambar 1 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/ultrasonic_skema.png" alt="Rangkaian Skematik Ultrasonik" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/ultrasonic_alat.jpg" alt="Pengujian Alat Fisik Ultrasonik" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/ultrasonic_blynk.jpg" alt="Dashboard Gauge Blynk IoT" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 4 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/ultrasonic_serial.png" alt="Log Data Serial Monitor" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Titik Navigasi -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- ====================================== -->
+
+            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">IoT-Based Non-Contact Distance Measurement via Ultrasonic Sensor</h1>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+                Proyek ini mengimplementasikan sistem pengukuran jarak tanpa kontak (non-contact distance measurement) berbasis Internet of Things (IoT) memanfaatkan sensor ultrasonik HC-SR04 dan mikrokontroler Wemos D1 Mini (ESP8266). Sistem dirancang untuk melakukan kalkulasi jarak pantul gelombang secara real-time, di mana visualisasi data interaktif dikirimkan secara berkala ke aplikasi mobile Blynk IoT dalam bentuk tampilan grafik Gauge.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Pengukuran jarak objek secara real-time dengan akurasi tinggi berbasis gelombang suara.</li>
+                        <li>Transmisi data nirkabel berskala global via Wi-Fi core ESP8266 ke server Blynk Cloud.</li>
+                        <li>Visualisasi interaktif jarak ukur menggunakan widget Gauge dengan rentang batas 0-4000 cm.</li>
+                        <li>Integrasi arsitektur pin virtual terdedikasi pada Virtual Pin V0 Blynk.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
+                        <li>Sensors: HC-SR04 Ultrasonic Range Sensor</li>
+                        <li>Pin Interface: Trig Pin (GPIO D5) & Echo Pin (GPIO D6)</li>
+                        <li>Platforms & Widgets: Blynk IoT Console & Mobile Gauge Interface</li>
+                        <li>Languages: C++ (Arduino IDE)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+            <div class="border-t border-slate-700 pt-6 mt-6">
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis Telemetri:</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Sistem bekerja dengan memicu pin digital D5 (Trig) untuk memancarkan pulsa ultrasonik berfrekuensi tinggi selama 10 mikrodetik. Gelombang suara yang memantul kembali setelah menabrak objek di depannya akan ditangkap oleh pin digital D6 (Echo). Mikrokontroler kemudian menghitung durasi waktu tempuh gelombang menggunakan fungsi pulseIn() untuk dikonversi ke dalam satuan centimeter (cm) melalui konstanta kecepatan suara.
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Data numerik hasil kalkulasi jarak aktual tersebut secara simultan dikirim setiap detik menuju Blynk Cloud menggunakan fungsi Blynk.virtualWrite(V0). Widget Gauge pada aplikasi Android akan secara dinamis memperbarui jarum indikator visual sesuai fluktuasi jarak objek yang terdeteksi, menyediakan fungsi pemantauan jarak jauh yang andal untuk kebutuhan sistem deteksi level air, parkir mandiri, maupun perimeter keamanan.
+                </p>
+            </div>
+        </div>
     
     </div>
 
