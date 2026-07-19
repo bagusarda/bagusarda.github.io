@@ -268,6 +268,80 @@
                 </p>
             </div>
         </div>
+
+        <!-- ====== PROYEK 4: MULTI-PLATFORM ENVIRONMENTAL MONITORING (DHT11) ====== -->
+        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+            
+            <!-- ====== STACKED CAROUSEL SECTION ====== -->
+            <div class="swiper mySwiper mb-8">
+                <div class="swiper-wrapper">
+                    <!-- Gambar 1 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/dht_skema.png" alt="Rangkaian Skematik DHT11" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/dht_webpage.jpg" alt="Local Webpage Interface" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/dht_blynk.jpg" alt="Blynk Gauge Dashboard" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 4 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/dht_thingspeak.png" alt="ThingSpeak Cloud Analytics" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Titik Navigasi -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- ====================================== -->
+
+            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Multi-Platform Climate Monitoring: Local Webpage, Blynk, & ThingSpeak</h1>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+                Proyek ini mengintegrasikan mikrokontroler Wemos D1 Mini (ESP8266) dengan sensor DHT11 untuk memantau parameter suhu udara dan kelembapan lingkungan secara real-time. Melalui eksperimen ini, dilakukan pengujian distribusi data menggunakan tiga metode interwajah terpisah, yaitu web server lokal statis, widget interaktif pada cloud Blynk IoT, serta visualisasi data analitik berbasis grafik tren waktu pada platform ThingSpeak.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Arsitektur Integrasi:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Local Webpage: Menyediakan server HTTP internal statis dengan auto-refresh halaman setiap 10 detik.</li>
+                        <li>Blynk IoT Dashboard: Visualisasi data real-time menggunakan widget Gauge terhubung via Virtual Pin V5 dan V6.</li>
+                        <li>ThingSpeak Cloud: Penyimpanan data berbasis channel virtual untuk tracking grafik analitik berkala per 30 detik.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
+                        <li>Sensors: DHT11 (Temperature & Humidity)</li>
+                        <li>Protocols: HTTP REST API & ThingSpeak Channel API</li>
+                        <li>Platforms: Blynk IoT Cloud, ThingSpeak Analytics</li>
+                        <li>Languages: C++ (Arduino IDE)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+            <div class="border-t border-slate-700 pt-6 mt-6">
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis Sistem:</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Pemrosesan data dimulai dari pembacaan berkala parameter fisik suhu dan kelembapan oleh sensor DHT11 melalui pin digital D5. Data mentah tersebut divalidasi secara internal sebelum dipetakan ke masing-masing arsitektur komunikasi. Pada antarmuka Webpage Lokal, data langsung dirender ke dalam kerangka dokumen HTML statis yang dikombinasikan dengan aset vektor SVG untuk visualisasi data tanpa koneksi internet luar.
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Untuk akses jarak jauh berskala global, integrasi Blynk IoT dan ThingSpeak memanfaatkan modul Wi-Fi core ESP8266 untuk melakukan transmisi payload data numerik secara berkala. Dashboard Blynk menyediakan respon pembacaan data yang dinamis via widget mobile, sedangkan server cloud ThingSpeak berfungsi optimal dalam merekam data log jangka panjang ke dalam grafik field analitik, mempermudah pengguna memantau fluktuasi iklim mikro secara berkala.
+                </p>
+            </div>
+        </div>
     
     </div>
 
