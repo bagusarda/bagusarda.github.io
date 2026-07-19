@@ -84,28 +84,32 @@
         <h3 class="text-2xl font-bold text-teal-400 mb-8">Pengalaman Kerja</h3>
         <div class="space-y-6">
 
-            
-            
-            <!-- KOTAK BALMON DENGAN FITUR SWIPE REVEAL DOKUMENTASI -->
+            <!-- KOTAK BALMON DENGAN FITUR SWIPE REVEAL & CAROUSEL PRAMENUH -->
             <div class="relative overflow-hidden bg-slate-950 rounded-xl border border-slate-700 hover:border-teal-400/50 transition group">
                 
-                <!-- LAYER BELAKANG: Galeri Foto Dokumentasi (Muncul pas di-swipe kiri) -->
-                <div class="absolute inset-0 flex items-center justify-end gap-4 px-6 bg-slate-950 z-0">
-                    <div class="text-left mr-auto max-w-[150px] md:max-w-none">
+                <!-- LAYER BELAKANG: Galeri Korsel Penuh dengan Efek Highlight Interaktif -->
+                <div id="carousel-container" class="absolute inset-0 z-0 flex items-center justify-start bg-slate-950 px-6 transition-all duration-300 opacity-0 pointer-events-none">
+                    
+                    <!-- Keterangan kiri pas kebuka -->
+                    <div class="absolute top-3 left-6 text-left z-20">
                         <p class="text-teal-400 font-bold text-xs uppercase tracking-wider">Dokumentasi PKL</p>
-                        <p class="text-slate-500 text-[11px] mt-0.5">Swipe kanan buat balik</p>
+                        <p class="text-slate-500 text-[10px]">Klik gambar / geser untuk ganti • Tarik kanan untuk kembali</p>
                     </div>
-                    <!-- Foto 1 -->
-                    <div class="w-24 h-24 md:w-28 md:h-24 rounded-lg bg-slate-800 border border-slate-700 overflow-hidden shadow-xl">
-                        <img src="dok/balmon1.jpg" alt="Dokumentasi 1" class="w-full h-full object-cover hover:scale-110 transition-transform">
-                    </div>
-                    <!-- Foto 2 -->
-                    <div class="w-24 h-24 md:w-28 md:h-24 rounded-lg bg-slate-800 border border-slate-700 overflow-hidden shadow-xl">
-                        <img src="dok/balmon2.jpg" alt="Dokumentasi 2" class="w-full h-full object-cover hover:scale-110 transition-transform">
-                    </div>
-                    <!-- Foto 3 (Otomatis ngumpet di HP biar gak sesak, muncul di MD/Laptop) -->
-                    <div class="hidden sm:block w-24 h-24 md:w-28 md:h-24 rounded-lg bg-slate-800 border border-slate-700 overflow-hidden shadow-xl">
-                        <img src="dok/balmon3.jpg" alt="Dokumentasi 3" class="w-full h-full object-cover hover:scale-110 transition-transform">
+
+                    <!-- Wrapper Foto Geser Horizontal -->
+                    <div id="carousel-track" class="flex items-center gap-6 transition-transform duration-300 ease-out pl-4 w-full h-full pt-6">
+                        <!-- Foto 1 (Default Highlight Gede) -->
+                        <div onclick="switchPhoto(0)" class="carousel-item shrink-0 w-3/4 md:w-2/3 h-3/5 rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-100 opacity-100 cursor-pointer">
+                            <img src="dok/balmon1.jpg" alt="Dokumentasi 1" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Foto 2 -->
+                        <div onclick="switchPhoto(1)" class="carousel-item shrink-0 w-3/4 md:w-2/3 h-3/5 rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-90 opacity-40 cursor-pointer">
+                            <img src="dok/balmon2.jpg" alt="Dokumentasi 2" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Foto 3 -->
+                        <div onclick="switchPhoto(2)" class="carousel-item shrink-0 w-3/4 md:w-2/3 h-3/5 rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-90 opacity-40 cursor-pointer">
+                            <img src="dok/balmon3.jpg" alt="Dokumentasi 3" class="w-full h-full object-cover">
+                        </div>
                     </div>
                 </div>
 
@@ -118,7 +122,7 @@
                     
                     <!-- Indikator Swipe (HP & PC) -->
                     <div class="absolute top-2 right-4 flex items-center gap-1 text-[10px] text-slate-500 font-bold select-none">
-                        <span>Swipe / Drag</span>
+                        <span>Swipe / Drag Kiri</span>
                         <svg class="w-3 h-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7M20 19l-7-7 7-7"></path>
                         </svg>
@@ -142,7 +146,6 @@
                 </div>
             </div>
 
-
             <!-- Kotak Pengajar SMK -->
             <div class="bg-slate-800 p-6 md:p-8 rounded-xl border border-slate-700 hover:border-teal-400/50 transition">
                 <div class="md:flex justify-between items-start mb-4">
@@ -161,8 +164,6 @@
                 </div>
             </div>
 
-
-            
         </div>
     </section>
 
@@ -222,48 +223,36 @@
             
             <!-- 1. IoT -->
             <a href="project-iot.html" class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-teal-400 transition-all hover:-translate-y-1 block relative">
-                
-                <!-- Ikon Panah Keluar -->
                 <svg class="w-6 h-6 text-teal-400 absolute top-4 right-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
-                
                 <h4 class="text-2xl font-bold mb-2">Internet of Things (IoT)</h4>
                 <p class="text-slate-400 text-sm">Implementasi dan perancangan sistem elektronika berbasis mikrokontroler.</p>
             </a>
 
             <!-- 2. Desain Grafis -->
             <a href="project-grafis.html" class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-teal-400 transition-all hover:-translate-y-1 block relative">
-
-                <!-- Ikon Panah Keluar -->
                 <svg class="w-6 h-6 text-teal-400 absolute top-4 right-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
-                
                 <h4 class="text-2xl font-bold mb-2">Desain Grafis</h4>
                 <p class="text-slate-400 text-sm">Mencakup perancangan identitas visual, media cetak, dan kebutuhan acara.</p>
             </a>
 
             <!-- 3. Web UI/UX -->
             <a href="project-web.html" class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-teal-400 transition-all hover:-translate-y-1 block relative">
-                
-                <!-- Ikon Panah Keluar -->
                 <svg class="w-6 h-6 text-teal-400 absolute top-4 right-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
-                
                 <h4 class="text-2xl font-bold mb-2">Desain Web UI/UX</h4>
                 <p class="text-slate-400 text-sm">Rancangan desain project UTS mata kuliah Disain Web. Mengusung tema sejarah dunia dan Indonesia. Dibuat menggunakan platform Figma.</p>
             </a>
 
             <!-- 4. Android App -->
             <a href="project-android.html" class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-teal-400 transition-all hover:-translate-y-1 block relative">
-                
-                <!-- Ikon Panah Keluar -->
                 <svg class="w-6 h-6 text-teal-400 absolute top-4 right-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
-                
                 <h4 class="text-2xl font-bold mb-2">Android Based App</h4>
                 <p class="text-slate-400 text-sm">Pengembangan aplikasi media pembelajaran interaktif untuk materi merakit komputer (Computer Assembly). Dibangun menggunakan engine Unity dan bahasa C#.</p>
             </a>
@@ -306,22 +295,33 @@
         <p>© 2026 Bagus Arda Valentian Akbar. All rights reserved.</p>
     </footer>
 
-    <!-- ====== SCRIPT LOGIK HANDLING SWIPE LOKAL (DUAL MODE: HP & PC) ====== -->
+    <!-- ====== SCRIPT LOGIK HANDLING SWIPE DUAL MODE & FOTO HIGHLIGHT CAROUSEL ====== -->
     <script>
         let startX = 0;
         let currentX = 0;
         let isSwiped = false;
         let isDragging = false; 
         const card = document.getElementById('swipe-card-balmon');
+        const container = document.getElementById('carousel-container');
+        const track = document.getElementById('carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
         
-        const maxTranslate = window.innerWidth < 768 ? -230 : -380; 
+        let currentPhotoIndex = 0;
+        const maxTranslate = window.innerWidth < 768 ? -280 : -450; 
 
-        // --- HANDLER UNTUK HP ---
-        function handleTouchStart(e) { startX = e.touches[0].clientX; }
-        function handleTouchMove(e) { currentX = e.touches[0].clientX; moveCard(currentX - startX); }
-        function handleTouchEnd() { endSwipe(currentX - startX); }
+        // --- TOUCH EVENTS (MOBILE) ---
+        function handleTouchStart(e) { 
+            startX = e.touches[0].clientX; 
+        }
+        function handleTouchMove(e) { 
+            currentX = e.touches[0].clientX; 
+            moveCard(currentX - startX); 
+        }
+        function handleTouchEnd() { 
+            endSwipe(currentX - startX); 
+        }
 
-        // --- HANDLER UNTUK PC ---
+        // --- MOUSE EVENTS (PC) ---
         card.addEventListener('mousedown', (e) => {
             isDragging = true;
             startX = e.clientX;
@@ -339,25 +339,109 @@
             endSwipe(currentX - startX);
         });
 
-        // --- LOGIK UTAMA ---
+        // --- MOUSE SWIPE INTERNAL UNTUK FOTO DOKUMENTASI (Korsel) ---
+        let cStartX = 0, cCurrentX = 0, cIsDragging = false;
+        container.addEventListener('mousedown', (e) => {
+            if(e.target.closest('.carousel-item')) return; // Prioritas klik ganti foto
+            cIsDragging = true;
+            cStartX = e.clientX;
+        });
+        window.addEventListener('mousemove', (e) => {
+            if(!cIsDragging) return;
+            cCurrentX = e.clientX;
+        });
+        window.addEventListener('mouseup', () => {
+            if(!cIsDragging) return;
+            cIsDragging = false;
+            let diff = cCurrentX - cStartX;
+            if(diff > 80) { // Tarik mouse ke kanan jauh buat balikin nutup card
+                closeCard();
+            } else if(diff < -40 && currentPhotoIndex < items.length - 1) {
+                switchPhoto(currentPhotoIndex + 1);
+            } else if(diff > 40 && currentPhotoIndex > 0) {
+                switchPhoto(currentPhotoIndex - 1);
+            }
+        });
+
+        // --- TOUCH SWIPE INTERNAL UNTUK HP KORSEL ---
+        container.addEventListener('touchstart', (e) => {
+            cStartX = e.touches[0].clientX;
+        });
+        container.addEventListener('touchmove', (e) => {
+            cCurrentX = e.touches[0].clientX;
+        });
+        container.addEventListener('touchend', () => {
+            let diff = cCurrentX - cStartX;
+            if(diff > 120) {
+                closeCard();
+            } else if(diff < -40 && currentPhotoIndex < items.length - 1) {
+                switchPhoto(currentPhotoIndex + 1);
+            } else if(diff > 40 && currentPhotoIndex > 0) {
+                switchPhoto(currentPhotoIndex - 1);
+            }
+        });
+
+        // --- LOGIK UTAMA GESER KOTAK DEPAN ---
         function moveCard(diffX) {
             if (!isSwiped && diffX < 0) {
                 if (diffX < maxTranslate) diffX = maxTranslate;
                 card.style.transform = `translateX(${diffX}px)`;
+                container.style.opacity = Math.min(1, Math.abs(diffX) / 100);
             } else if (isSwiped && diffX > 0) {
                 let newTranslate = maxTranslate + diffX;
                 if (newTranslate > 0) newTranslate = 0;
                 card.style.transform = `translateX(${newTranslate}px)`;
             }
         }
+
         function endSwipe(diffX) {
             if (!isSwiped) {
-                if (diffX < -70) { card.style.transform = `translateX(${maxTranslate}px)`; isSwiped = true; }
-                else { card.style.transform = 'translateX(0px)'; }
+                if (diffX < -60) {
+                    card.style.transform = `translateX(${maxTranslate}px)`;
+                    isSwiped = true;
+                    container.style.opacity = "1";
+                    container.style.pointerEvents = "auto";
+                    switchPhoto(0);
+                } else {
+                    card.style.transform = 'translateX(0px)';
+                    container.style.opacity = "0";
+                }
             } else {
-                if (diffX > 70) { card.style.transform = 'translateX(0px)'; isSwiped = false; }
-                else { card.style.transform = `translateX(${maxTranslate}px)`; }
+                if (diffX > 60) {
+                    closeCard();
+                } else {
+                    card.style.transform = `translateX(${maxTranslate}px)`;
+                }
             }
+        }
+
+        function closeCard() {
+            card.style.transform = 'translateX(0px)';
+            isSwiped = false;
+            container.style.opacity = "0";
+            container.style.pointerEvents = "none";
+        }
+
+        // --- KONTROL MECHANIC HIGHLIGHT & TRACK CAROUSEL ---
+        function switchPhoto(index) {
+            currentPhotoIndex = index;
+            
+            // Jarak geser horizontal berdasarkan lebar kontainer responsif
+            const itemWidth = items[0].offsetWidth + 24; 
+            const offset = -index * itemWidth;
+            
+            track.style.transform = `translateX(${offset}px)`;
+            
+            // Atur highlight skala & kegelapan gambar
+            items.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.remove('scale-90', 'opacity-40');
+                    item.classList.add('scale-105', 'opacity-100', 'border-teal-400');
+                } else {
+                    item.classList.remove('scale-105', 'opacity-100', 'border-teal-400');
+                    item.classList.add('scale-90', 'opacity-40');
+                }
+            });
         }
     </script>
 
