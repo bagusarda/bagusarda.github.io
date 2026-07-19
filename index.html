@@ -35,15 +35,12 @@
             </p>
             <div class="flex flex-wrap gap-4 justify-center md:justify-start mb-6">
                 <a href="mailto:bagusarda14@gmail.com" class="bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold py-3 px-6 rounded-lg transition inline-block">Email Saya</a>
-                <!-- Diubah jadi navigasi ke footer -->
                 <a href="#contact-footer" class="border border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-slate-900 font-bold py-3 px-6 rounded-lg transition inline-block">Kontak Saya</a>
             </div>
             <p class="text-slate-500 text-sm">
-    Instagram/Social: 
-    <a href="https://www.instagram.com/bagusardaa_" target="_blank" class="text-teal-400 hover:underline font-bold">
-        @bagusardaa_
-    </a>
-</p>
+                Instagram/Social: 
+                <a href="https://www.instagram.com/bagusardaa_" target="_blank" class="text-teal-400 hover:underline font-bold">@bagusardaa_</a>
+            </p>
         </div>
         <div class="mt-10 md:mt-0 md:w-1/3 flex justify-center">
             <div class="w-56 h-56 md:w-64 md:h-64 rounded-full bg-slate-800 border-4 border-teal-400 overflow-hidden flex items-center justify-center text-slate-500 shadow-xl shadow-teal-500/20">
@@ -52,6 +49,7 @@
         </div>
     </section>
 
+    
     <!-- Education Section -->
     <section id="education" class="w-11/12 max-w-[1400px] mx-auto px-5 py-16 border-t border-slate-800">
         <h3 class="text-2xl font-bold text-teal-400 mb-8">Pendidikan</h3>
@@ -87,47 +85,32 @@
             <!-- KOTAK BALMON DENGAN FITUR SWIPE REVEAL & CAROUSEL PRAMENUH -->
             <div class="relative overflow-hidden bg-slate-950 rounded-xl border border-slate-700 hover:border-teal-400/50 transition group">
                 
-                <!-- LAYER BELAKANG: Galeri Korsel Penuh dengan Efek Highlight Interaktif -->
-                <div id="carousel-container" class="absolute inset-0 z-0 flex items-center justify-start bg-slate-950 px-6 transition-all duration-300 opacity-0 pointer-events-none">
-                    
-                    <!-- Keterangan kiri pas kebuka -->
+                <!-- LAYER BELAKANG: Galeri (Disesuaikan biar Highlight di kanan) -->
+                <div id="carousel-container" class="absolute inset-0 z-0 flex items-center justify-start bg-slate-950 transition-all duration-300 opacity-0 pointer-events-none">
                     <div class="absolute top-3 left-6 text-left z-20">
                         <p class="text-teal-400 font-bold text-xs uppercase tracking-wider">Dokumentasi PKL</p>
-                        <p class="text-slate-500 text-[10px]">Klik gambar / geser untuk ganti • Tarik kanan untuk kembali</p>
                     </div>
 
-                    <!-- Wrapper Foto Geser Horizontal -->
-                    <div id="carousel-track" class="flex items-center gap-6 transition-transform duration-300 ease-out pl-4 w-full h-full pt-6">
-                        <!-- Foto 1 (Default Highlight Gede) -->
-                        <div onclick="switchPhoto(0)" class="carousel-item shrink-0 w-3/4 md:w-2/3 h-3/5 rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-100 opacity-100 cursor-pointer">
+                    <!-- PENTING: pl-20 atau pl-32 biar foto geser ke kanan -->
+                    <div id="carousel-track" class="flex items-center gap-6 transition-transform duration-300 ease-out pl-24 md:pl-40 w-full h-full pt-6">
+                        <div onclick="switchPhoto(0)" class="carousel-item shrink-0 w-[80%] md:w-[70%] h-[75%] rounded-lg bg-slate-900 border-2 border-teal-400 overflow-hidden shadow-2xl transition-all duration-300 scale-100 opacity-100 cursor-pointer">
                             <img src="dok/balmon1.jpg" alt="Dokumentasi 1" class="w-full h-full object-cover">
                         </div>
-                        <!-- Foto 2 -->
-                        <div onclick="switchPhoto(1)" class="carousel-item shrink-0 w-3/4 md:w-2/3 h-3/5 rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-90 opacity-40 cursor-pointer">
+                        <div onclick="switchPhoto(1)" class="carousel-item shrink-0 w-[80%] md:w-[70%] h-[75%] rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-90 opacity-40 cursor-pointer">
                             <img src="dok/balmon2.jpg" alt="Dokumentasi 2" class="w-full h-full object-cover">
                         </div>
-                        <!-- Foto 3 -->
-                        <div onclick="switchPhoto(2)" class="carousel-item shrink-0 w-3/4 md:w-2/3 h-3/5 rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-90 opacity-40 cursor-pointer">
+                        <div onclick="switchPhoto(2)" class="carousel-item shrink-0 w-[80%] md:w-[70%] h-[75%] rounded-lg bg-slate-900 border border-slate-700 overflow-hidden shadow-2xl transition-all duration-300 scale-90 opacity-40 cursor-pointer">
                             <img src="dok/balmon3.jpg" alt="Dokumentasi 3" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
 
-                <!-- LAYER DEPAN: Isi Detail Pengalaman Kerja lo (Bisa di-swipe kanan-kiri) -->
-                <div id="swipe-card-balmon" 
-                     ontouchstart="handleTouchStart(event)" 
-                     ontouchmove="handleTouchMove(event)"
-                     ontouchend="handleTouchEnd(event)"
-                     class="relative bg-slate-800 p-6 md:p-8 z-10 transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing select-none">
-                    
-                    <!-- Indikator Swipe (HP & PC) -->
+                <!-- LAYER DEPAN -->
+                <div id="swipe-card-balmon" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)" class="relative bg-slate-800 p-6 md:p-8 z-10 transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing select-none">
                     <div class="absolute top-2 right-4 flex items-center gap-1 text-[10px] text-slate-500 font-bold select-none">
-                        <span>Swipe / Drag Kiri</span>
-                        <svg class="w-3 h-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7M20 19l-7-7 7-7"></path>
-                        </svg>
+                        <span>Swipe Kiri</span>
+                        <svg class="w-3 h-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7M20 19l-7-7 7-7"></path></svg>
                     </div>
-
                     <div class="md:flex justify-between items-start mb-4">
                         <div>
                             <h4 class="text-2xl font-bold mb-1">Staf Monitoring Frekuensi (Praktik Industri)</h4>
@@ -136,7 +119,6 @@
                         <span class="mt-4 md:mt-0 inline-block text-slate-300 text-sm font-bold bg-slate-700 px-3 py-1 rounded pointer-events-none">Des 2023 - Feb 2024</span>
                     </div>
                     <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700/50 pointer-events-none">
-                        <h5 class="font-bold text-teal-400 mb-2 text-sm">Kegiatan di Balmon:</h5>
                         <ul class="list-disc list-inside text-slate-300 space-y-1 text-sm">
                             <li>Melakukan pemantauan penggunaan Siaran TV Digital</li>
                             <li>Melakukan monitoring Frekuensi dan Bandwidth Siaran TV Digital</li>
@@ -297,153 +279,34 @@
 
     <!-- ====== SCRIPT LOGIK HANDLING SWIPE DUAL MODE & FOTO HIGHLIGHT CAROUSEL ====== -->
     <script>
-        let startX = 0;
-        let currentX = 0;
-        let isSwiped = false;
-        let isDragging = false; 
-        const card = document.getElementById('swipe-card-balmon');
-        const container = document.getElementById('carousel-container');
-        const track = document.getElementById('carousel-track');
-        const items = document.querySelectorAll('.carousel-item');
-        
-        let currentPhotoIndex = 0;
-        const maxTranslate = window.innerWidth < 768 ? -280 : -450; 
+        // SCRIPT LOGIK SWIPE & CAROUSEL (Disesuaikan Offset-nya)
+        let startX=0, currentX=0, isSwiped=false, isDragging=false, cStartX=0, cCurrentX=0, cIsDragging=false, currentPhotoIndex=0;
+        const card = document.getElementById('swipe-card-balmon'), container = document.getElementById('carousel-container'), track = document.getElementById('carousel-track'), items = document.querySelectorAll('.carousel-item');
+        const maxTranslate = window.innerWidth < 768 ? -280 : -450;
 
-        // --- TOUCH EVENTS (MOBILE) ---
-        function handleTouchStart(e) { 
-            startX = e.touches[0].clientX; 
-        }
-        function handleTouchMove(e) { 
-            currentX = e.touches[0].clientX; 
-            moveCard(currentX - startX); 
-        }
-        function handleTouchEnd() { 
-            endSwipe(currentX - startX); 
-        }
+        function handleTouchStart(e) { startX = e.touches[0].clientX; }
+        function handleTouchMove(e) { currentX = e.touches[0].clientX; moveCard(currentX - startX); }
+        function handleTouchEnd() { endSwipe(currentX - startX); }
 
-        // --- MOUSE EVENTS (PC) ---
-        card.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.clientX;
-            card.classList.remove('transition-transform');
-        });
-        window.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            currentX = e.clientX;
-            moveCard(currentX - startX);
-        });
-        window.addEventListener('mouseup', () => {
-            if (!isDragging) return;
-            isDragging = false;
-            card.classList.add('transition-transform');
-            endSwipe(currentX - startX);
-        });
-
-        // --- MOUSE SWIPE INTERNAL UNTUK FOTO DOKUMENTASI (Korsel) ---
-        let cStartX = 0, cCurrentX = 0, cIsDragging = false;
-        container.addEventListener('mousedown', (e) => {
-            if(e.target.closest('.carousel-item')) return; // Prioritas klik ganti foto
-            cIsDragging = true;
-            cStartX = e.clientX;
-        });
-        window.addEventListener('mousemove', (e) => {
-            if(!cIsDragging) return;
-            cCurrentX = e.clientX;
-        });
-        window.addEventListener('mouseup', () => {
-            if(!cIsDragging) return;
-            cIsDragging = false;
-            let diff = cCurrentX - cStartX;
-            if(diff > 80) { // Tarik mouse ke kanan jauh buat balikin nutup card
-                closeCard();
-            } else if(diff < -40 && currentPhotoIndex < items.length - 1) {
-                switchPhoto(currentPhotoIndex + 1);
-            } else if(diff > 40 && currentPhotoIndex > 0) {
-                switchPhoto(currentPhotoIndex - 1);
-            }
-        });
-
-        // --- TOUCH SWIPE INTERNAL UNTUK HP KORSEL ---
-        container.addEventListener('touchstart', (e) => {
-            cStartX = e.touches[0].clientX;
-        });
-        container.addEventListener('touchmove', (e) => {
-            cCurrentX = e.touches[0].clientX;
-        });
-        container.addEventListener('touchend', () => {
-            let diff = cCurrentX - cStartX;
-            if(diff > 120) {
-                closeCard();
-            } else if(diff < -40 && currentPhotoIndex < items.length - 1) {
-                switchPhoto(currentPhotoIndex + 1);
-            } else if(diff > 40 && currentPhotoIndex > 0) {
-                switchPhoto(currentPhotoIndex - 1);
-            }
-        });
-
-        // --- LOGIK UTAMA GESER KOTAK DEPAN ---
         function moveCard(diffX) {
-            if (!isSwiped && diffX < 0) {
-                if (diffX < maxTranslate) diffX = maxTranslate;
-                card.style.transform = `translateX(${diffX}px)`;
-                container.style.opacity = Math.min(1, Math.abs(diffX) / 100);
-            } else if (isSwiped && diffX > 0) {
-                let newTranslate = maxTranslate + diffX;
-                if (newTranslate > 0) newTranslate = 0;
-                card.style.transform = `translateX(${newTranslate}px)`;
-            }
+            if (!isSwiped && diffX < 0) { if (diffX < maxTranslate) diffX = maxTranslate; card.style.transform = `translateX(${diffX}px)`; container.style.opacity = Math.min(1, Math.abs(diffX) / 100); }
+            else if (isSwiped && diffX > 0) { let newTranslate = maxTranslate + diffX; if (newTranslate > 0) newTranslate = 0; card.style.transform = `translateX(${newTranslate}px)`; }
         }
-
         function endSwipe(diffX) {
-            if (!isSwiped) {
-                if (diffX < -60) {
-                    card.style.transform = `translateX(${maxTranslate}px)`;
-                    isSwiped = true;
-                    container.style.opacity = "1";
-                    container.style.pointerEvents = "auto";
-                    switchPhoto(0);
-                } else {
-                    card.style.transform = 'translateX(0px)';
-                    container.style.opacity = "0";
-                }
-            } else {
-                if (diffX > 60) {
-                    closeCard();
-                } else {
-                    card.style.transform = `translateX(${maxTranslate}px)`;
-                }
-            }
+            if (!isSwiped) { if (diffX < -60) { card.style.transform = `translateX(${maxTranslate}px)`; isSwiped = true; container.style.opacity = "1"; container.style.pointerEvents = "auto"; switchPhoto(0); } else { card.style.transform = 'translateX(0px)'; container.style.opacity = "0"; } }
+            else { if (diffX > 60) closeCard(); else card.style.transform = `translateX(${maxTranslate}px)`; }
         }
-
-        function closeCard() {
-            card.style.transform = 'translateX(0px)';
-            isSwiped = false;
-            container.style.opacity = "0";
-            container.style.pointerEvents = "none";
-        }
-
-        // --- KONTROL MECHANIC HIGHLIGHT & TRACK CAROUSEL ---
+        function closeCard() { card.style.transform = 'translateX(0px)'; isSwiped = false; container.style.opacity = "0"; container.style.pointerEvents = "none"; }
         function switchPhoto(index) {
             currentPhotoIndex = index;
-            
-            // Jarak geser horizontal berdasarkan lebar kontainer responsif
-            const itemWidth = items[0].offsetWidth + 24; 
-            const offset = -index * itemWidth;
-            
-            track.style.transform = `translateX(${offset}px)`;
-            
-            // Atur highlight skala & kegelapan gambar
+            // PENTING: offset -index * itemWidth + 80 biar foto tampil menjorok ke kanan
+            const itemWidth = items[0].offsetWidth + 24;
+            track.style.transform = `translateX(${-index * itemWidth + 80}px)`;
             items.forEach((item, i) => {
-                if (i === index) {
-                    item.classList.remove('scale-90', 'opacity-40');
-                    item.classList.add('scale-105', 'opacity-100', 'border-teal-400');
-                } else {
-                    item.classList.remove('scale-105', 'opacity-100', 'border-teal-400');
-                    item.classList.add('scale-90', 'opacity-40');
-                }
+                if (i === index) { item.classList.remove('scale-90', 'opacity-40'); item.classList.add('scale-105', 'opacity-100', 'border-2', 'border-teal-400'); }
+                else { item.classList.remove('scale-105', 'opacity-100', 'border-2', 'border-teal-400'); item.classList.add('scale-90', 'opacity-40'); }
             });
         }
     </script>
-
 </body>
 </html>
