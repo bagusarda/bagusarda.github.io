@@ -105,10 +105,10 @@
             <div class="border-t border-slate-700 pt-6 mt-6">
                 <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis:</h2>
                 <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                    Sistem otomatisasi ini menggunakan platform <strong>IFTTT</strong> sebagai perantara web request (Webhooks API) ketika menerima *trigger* perintah suara dari Google Assistant, yang kemudian diteruskan langsung ke server Blynk Cloud untuk mengubah *state* relay pada pin D5 Wemos D1 Mini. 
+                    Sistem otomatisasi ini menggunakan platform <strong>IFTTT</strong> sebagai perantara web request (Webhooks API) ketika menerima <i>trigger</i> perintah suara dari Google Assistant, yang kemudian diteruskan langsung ke server Blynk Cloud untuk mengubah <i>state</i> relay pada pin D5 Wemos D1 Mini. 
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Untuk kalkulasi daya, data analog dari sensor arus dan tegangan diproses menggunakan modul ADC ADS1115 guna menjamin resolusi pembacaan data yang lebih presisi sebelum dikirimkan ke dashboard Blynk IoT.
+                    Untuk kalkulasi daya, data analog dari sensor arus (ACS712) dan sensor tegangan (ZMPT101B) diproses langsung oleh <strong>Wemos D1 Mini</strong>. Data hasil konversi tersebut kemudian dikalibrasi secara internal melalui kode pemrograman sebelum dikirimkan secara real-time ke dashboard Blynk IoT.
                 </p>
             </div>
         </div>
