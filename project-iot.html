@@ -89,30 +89,28 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-            effect: "creative", /* Pake Creative Effect biar bisa kustom tumpukan */
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            loop: true,
-            creativeEffect: {
-                prev: {
-                    shadow: true,
-                    // Geser ke kiri (translate X), mundur ke belakang (translate Z), pudar (opacity)
-                    translate: ["-85%", 0, -200], 
-                    opacity: 0.3, /* Kiri pudar banget */
-                },
-                next: {
-                    shadow: true,
-                    // Geser ke kanan (translate X), mundur ke belakang (translate Z), pudar (opacity)
-                    translate: ["85%", 0, -200], 
-                    opacity: 0.3, /* Kanan pudar banget */
-                },
+        effect: "creative",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: false, /* FIX: Matiin loop-nya biar kaga unlimited sebelah! */
+        creativeEffect: {
+            prev: {
+                shadow: true,
+                translate: ["-85%", 0, -200], 
+                opacity: 0.3,
             },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
+            next: {
+                shadow: true,
+                translate: ["85%", 0, -200], 
+                opacity: 0.3,
             },
-        });
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
     </script>
 </body>
 </html>
