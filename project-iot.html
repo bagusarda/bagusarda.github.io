@@ -194,6 +194,80 @@
                     </p>
                 </div>
             </div>
+
+        <!-- ====== PROYEK 3: KOMPARASI KONTROL LED VIA WEB SERVER, BLYNK, & ADAFRUIT ====== -->
+        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+            
+            <!-- ====== STACKED CAROUSEL SECTION ====== -->
+            <div class="swiper mySwiper mb-8">
+                <div class="swiper-wrapper">
+                    <!-- Gambar 1 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/led_skema.png" alt="Rangkaian Skematik LED" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/led_webserver.jpg" alt="Interface Web Server Lokal" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/led_blynk.jpg" alt="Dashboard Blynk IoT" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 4 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/led_adafruit.png" alt="Dashboard Adafruit IO MQTT" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Titik Navigasi -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- ====================================== -->
+
+            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Multi-Platform IoT Actuation: Web Server, Blynk, & Adafruit IO (MQTT)</h1>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+                Proyek eksperimental ini mengimplementasikan kendali aktuasi 4 buah LED menggunakan mikrokontroler Wemos D1 Mini (ESP8266) yang diuji melalui tiga arsitektur dan platform IoT berbeda[cite: 2, 3, 4]. Fokus proyek ini adalah melakukan komparasi performa kontrol aktuasi antara sistem <i>local web server</i>, platform <i>cloud ecosystem</i> (Blynk), serta arsitektur berbasis broker MQTT (Adafruit IO)[cite: 2, 3, 4].
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Arsitektur Pengujian:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li><strong>Local Web Server:</strong> Wemos D1 Mini bertindak sebagai HTTP server lokal[cite: 2].</li>
+                        <li><strong>Blynk Cloud:</strong> Integrasi API platform via Virtual Pin (V1-V4) secara <i>online</i>[cite: 3].</li>
+                        <li><strong>Adafruit IO:</strong> Implementasi protokol MQTT via arsitektur <i>publish/subscribe</i> pada <i>feeds</i>[cite: 4].</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)[cite: 2, 3, 4]</li>
+                        <li>Actuators: 4x LED & 4x Resistor 220 Ohm[cite: 2, 3, 4]</li>
+                        <li>Protocols: HTTP Rest API & MQTT (Port 1883)[cite: 2, 4]</li>
+                        <li>Platforms: Blynk IoT, Adafruit IO Core[cite: 3, 4]</li>
+                        <li>Languages: C++ (Arduino IDE)[cite: 2, 3, 4]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+            <div class="border-t border-slate-700 pt-6 mt-6">
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis Komparasi:</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Pada pengujian <strong>Web Server Lokal</strong>, kendali dilakukan dengan memproses *string request* pada *header* HTTP ketika tombol di-*click*[cite: 2]. Sistem ini andal tanpa ketergantungan internet luar, namun terbatas pada cakupan area Wi-Fi lokal[cite: 2]. Sementara pada pengujian <strong>Blynk IoT</strong>, transisi data memanfaatkan pustaka Blynk untuk sinkronisasi *state* pin digital secara *real-time* dan interaktif via aplikasi *mobile*[cite: 3].
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Untuk efisiensi data tertinggi, protokol <strong>MQTT via Adafruit IO</strong> terbukti paling optimal[cite: 4]. Wemos cukup melakukan *subscribe* ke satu *feed* terpusat (`/feeds/LED`)[cite: 4]. Ketika *toggle switch* pada dashboard Adafruit diubah, *broker* langsung mendorong data *payload* pendek ("ON" / "OFF")[cite: 4], menghasilkan latensi waktu respon aktual yang sangat minim dibandingkan metode HTTP *request* biasa[cite: 2, 4].
+                </p>
+            </div>
+        </div>
     
     </div>
 
