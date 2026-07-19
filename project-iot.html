@@ -58,27 +58,27 @@
 
             <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Smart Home IoT: Voice Control & Energy Monitoring</h1>
             <p class="text-slate-300 mb-6 leading-relaxed">
-                Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>[cite: 1]. 
-                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan kombinasi sensor ZMPT101B dan ACS712[cite: 1].
+                Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>. 
+                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan kombinasi sensor ZMPT101B dan ACS712.
             </p>
             
             <div class="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
                     <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Kontrol lampu via perintah suara (IFTTT & Google Assistant)[cite: 1]</li>
-                        <li>Monitoring parameter listrik (V, I, P) di aplikasi mobile Blynk[cite: 1]</li>
-                        <li>Tampilan data lokal *real-time* via LCD 16x2[cite: 1]</li>
-                        <li>Kontrol manual *override* via aplikasi Blynk[cite: 1]</li>
+                        <li>Kontrol lampu via perintah suara (IFTTT & Google Assistant)</li>
+                        <li>Monitoring parameter listrik (V, I, P) di aplikasi mobile Blynk</li>
+                        <li>Tampilan data lokal *real-time* via LCD 16x2</li>
+                        <li>Kontrol manual *override* via aplikasi Blynk</li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
                     <ul class="list-disc list-inside text-slate-300 space-y-1">
-                        <li>Microcontroller: Wemos D1 Mini (ESP8266)[cite: 1]</li>
-                        <li>Sensors: ZMPT101B (Voltage) & ACS712 (Current)[cite: 1]</li>
-                        <li>Platforms: Blynk IoT, IFTTT, Google Home[cite: 1]</li>
-                        <li>Languages: C++ (Arduino IDE)[cite: 1]</li>
+                        <li>Microcontroller: Wemos D1 Mini (ESP8266)</li>
+                        <li>Sensors: ZMPT101B (Voltage) & ACS712 (Current)</li>
+                        <li>Platforms: Blynk IoT, IFTTT, Google Home</li>
+                        <li>Languages: C++ (Arduino IDE)</li>
                     </ul>
                 </div>
             </div>
@@ -87,10 +87,10 @@
             <div class="border-t border-slate-700 pt-6 mt-6">
                 <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis:</h2>
                 <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                    Sistem otomatisasi ini menggunakan platform <strong>IFTTT</strong> sebagai perantara web request (Webhooks API) ketika menerima *trigger* perintah suara dari Google Assistant, yang kemudian diteruskan langsung ke server Blynk Cloud untuk mengubah *state* relay pada pin D5 Wemos D1 Mini[cite: 1]. 
+                    Sistem otomatisasi ini menggunakan platform <strong>IFTTT</strong> sebagai perantara web request (Webhooks API) ketika menerima *trigger* perintah suara dari Google Assistant, yang kemudian diteruskan langsung ke server Blynk Cloud untuk mengubah *state* relay pada pin D5 Wemos D1 Mini. 
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
-                    Untuk kalkulasi daya, data analog dari sensor arus dan tegangan diproses menggunakan modul ADC ADS1115 guna menjamin resolusi pembacaan data yang lebih presisi sebelum dikirimkan ke dashboard Blynk IoT[cite: 1].
+                    Untuk kalkulasi daya, data analog dari sensor arus dan tegangan diproses menggunakan modul ADC ADS1115 guna menjamin resolusi pembacaan data yang lebih presisi sebelum dikirimkan ke dashboard Blynk IoT.
                 </p>
             </div>
         </div>
