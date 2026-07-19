@@ -112,6 +112,89 @@
                 </p>
             </div>
         </div>
+
+        <!-- ====== PROYEK 2: MONITORING KELEMBAPAN TANAH ====== -->
+            <div class="border-t border-slate-700 pt-10 mt-10">
+                
+                <!-- ====== STACKED CAROUSEL SECTION ====== -->
+                <div class="swiper mySwiper mb-8">
+                    <div class="swiper-wrapper">
+                        <!-- Gambar 1 -->
+                        <div class="swiper-slide border border-slate-600">
+                            <div class="swiper-zoom-container">
+                                <img src="Assets/tanah1.jpg" alt="Skema Rangkaian" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Gambar 2 -->
+                        <div class="swiper-slide border border-slate-600">
+                            <div class="swiper-zoom-container">
+                                <img src="Assets/tanah2.jpg" alt="Simulasi Proteus" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Gambar 3 -->
+                        <div class="swiper-slide border border-slate-600">
+                            <div class="swiper-zoom-container">
+                                <img src="Assets/tanah3.jpg" alt="Pengujian Alat Fisik" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Gambar 4 -->
+                        <div class="swiper-slide border border-slate-600">
+                            <div class="swiper-zoom-container">
+                                <img src="Assets/tanah4.jpg" alt="Tampilan Web Server" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Gambar 5 -->
+                        <div class="swiper-slide border border-slate-600">
+                            <div class="swiper-zoom-container">
+                                <img src="Assets/tanah5.jpg" alt="Dashboard Blynk Mobile" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Titik Navigasi -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- ====================================== -->
+
+                <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Soil Moisture Monitoring: Blynk IoT & Local Web Server</h1>
+                <p class="text-slate-300 mb-6 leading-relaxed">
+                    Sistem <i>monitoring</i> kelembapan tanah berbasis <i>Internet of Things</i> (IoT) yang dirancang untuk mendeteksi kadar air tanah secara <i>real-time</i>[cite: 1]. 
+                    Sistem ini mengintegrasikan mikrokontroler dengan sensor tanah untuk mendukung optimalisasi perawatan tanaman, di mana data hasil pengukuran dapat dipantau secara <i>offline</i> melalui LCD fisik maupun secara <i>online</i> melalui aplikasi Blynk dan halaman <i>local web server</i>[cite: 1].
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Utama:</h2>
+                        <ul class="list-disc list-inside text-slate-300 space-y-1">
+                            <li>Monitoring nilai ADC, Tegangan, dan Status tanah secara <i>real-time</i>[cite: 1]</li>
+                            <li>Tampilan persentase kelembapan (0-100%) pada halaman web lokal[cite: 1]</li>
+                            <li>Antarmuka lokal menggunakan LCD 16x2 dengan modul I2C[cite: 1]</li>
+                            <li>Integrasi dual-sistem <i>online</i> via Blynk Cloud dan HTTP Web Server[cite: 1]</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-teal-400 mb-3">Tech Stack:</h2>
+                        <ul class="list-disc list-inside text-slate-300 space-y-1">
+                            <li>Microcontroller: Wemos D1 Mini / NodeMCU (ESP8266)[cite: 1]</li>
+                            <li>Sensors: Soil Moisture Sensor (Analog Output A0)[cite: 1]</li>
+                            <li>Display: LCD 16x2 dengan Modul I2C[cite: 1]</li>
+                            <li>Platforms: Blynk IoT & HTTP Web Server Lokal[cite: 1]</li>
+                            <li>Languages: C++ (Arduino IDE)[cite: 1]</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+                <div class="border-t border-slate-700 pt-6 mt-6">
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis:</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Sistem bekerja dengan membaca sinyal analog dari sensor kelembapan tanah melalui pin A0 pada ESP8266 dengan <i>range</i> nilai ADC antara 0 hingga 1023[cite: 1]. Data digital hasil konversi tersebut diproses langsung secara internal oleh mikrokontroler untuk dihitung ke dalam satuan tegangan nyata (0-5 Volt) serta skala persentase kelembapan tanah[cite: 1].
+                    </p>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Kondisi tanah kemudian dikategorikan berdasarkan nilai pembacaan, di mana nilai ADC $\ge$ 510 akan menetapkan status <i>Kering</i>, sedangkan nilai < 510 memicu status <i>Basah</i>[cite: 1]. Data status dan parameter numerik ini kemudian dikirim secara berkala ke server Blynk menggunakan fungsi `Blynk.virtualWrite()`[cite: 1] serta dirender secara lokal ke halaman <i>web server</i> berbasis IP Address yang dapat diakses via <i>browser</i>[cite: 1].
+                    </p>
+                </div>
+            </div>
+    
     </div>
 
     <!-- Swiper.js Script -->
