@@ -306,59 +306,60 @@
         <p>© 2026 Bagus Arda Valentian Akbar. All rights reserved.</p>
     </footer>
 
-    <!-- ====== SCRIPT LOGIK HANDLING SWIPE LOKAL (Taruh sebelum penutup </body>) ====== -->
-            <script>
-                let startX = 0;
-                let currentX = 0;
-                let isSwiped = false;
-                const card = document.getElementById('swipe-card-balmon');
-                
-                // Cari tahu batas maksimal geser berdasarkan lebar foto dokumentasi luar
-                const maxTranslate = window.innerWidth < 768 ? -230 : -380; 
+    <!-- ====== SCRIPT LOGIK HANDLING SWIPE LOKAL (DUAL MODE: HP & PC) ====== -->
+    <script>
+        let startX = 0;
+        let currentX = 0;
+        let isSwiped = false;
+        let isDragging = false; 
+        const card = document.getElementById('swipe-card-balmon');
+        
+        const maxTranslate = window.innerWidth < 768 ? -230 : -380; 
 
-                function handleTouchStart(e) {
-                    startX = e.touches[0].clientX;
-                }
+        // --- HANDLER UNTUK HP ---
+        function handleTouchStart(e) { startX = e.touches[0].clientX; }
+        function handleTouchMove(e) { currentX = e.touches[0].clientX; moveCard(currentX - startX); }
+        function handleTouchEnd() { endSwipe(currentX - startX); }
 
-                function handleTouchMove(e) {
-                    currentX = e.touches[0].clientX;
-                    let diffX = currentX - startX;
+        // --- HANDLER UNTUK PC ---
+        card.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            card.classList.remove('transition-transform');
+        });
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            currentX = e.clientX;
+            moveCard(currentX - startX);
+        });
+        window.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            card.classList.add('transition-transform');
+            endSwipe(currentX - startX);
+        });
 
-                    // Jika posisi normal dan di-swipe ke kiri
-                    if (!isSwiped && diffX < 0) {
-                        if (diffX < maxTranslate) diffX = maxTranslate;
-                        card.style.transform = `translateX(${diffX}px)`;
-                    } 
-                    // Jika posisi lagi kebuka dan di-swipe ke kanan
-                    else if (isSwiped && diffX > 0) {
-                        let newTranslate = maxTranslate + diffX;
-                        if (newTranslate > 0) newTranslate = 0;
-                        card.style.transform = `translateX(${newTranslate}px)`;
-                    }
-                }
-
-                function handleTouchEnd(e) {
-                    let diffX = currentX - startX;
-
-                    if (!isSwiped) {
-                        // Kalau swipe kiri melewati jarak 70px, kunci posisi kebuka
-                        if (diffX < -70) {
-                            card.style.transform = `translateX(${maxTranslate}px)`;
-                            isSwiped = true;
-                        } else {
-                            card.style.transform = 'translateX(0px)';
-                        }
-                    } else {
-                        // Kalau lagi kebuka terus di-swipe kanan melewati 70px, balikin normal
-                        if (diffX > 70) {
-                            card.style.transform = 'translateX(0px)';
-                            isSwiped = false;
-                        } else {
-                            card.style.transform = `translateX(${maxTranslate}px)`;
-                        }
-                    }
-                }
-            </script>
+        // --- LOGIK UTAMA ---
+        function moveCard(diffX) {
+            if (!isSwiped && diffX < 0) {
+                if (diffX < maxTranslate) diffX = maxTranslate;
+                card.style.transform = `translateX(${diffX}px)`;
+            } else if (isSwiped && diffX > 0) {
+                let newTranslate = maxTranslate + diffX;
+                if (newTranslate > 0) newTranslate = 0;
+                card.style.transform = `translateX(${newTranslate}px)`;
+            }
+        }
+        function endSwipe(diffX) {
+            if (!isSwiped) {
+                if (diffX < -70) { card.style.transform = `translateX(${maxTranslate}px)`; isSwiped = true; }
+                else { card.style.transform = 'translateX(0px)'; }
+            } else {
+                if (diffX > 70) { card.style.transform = 'translateX(0px)'; isSwiped = false; }
+                else { card.style.transform = `translateX(${maxTranslate}px)`; }
+            }
+        }
+    </script>
 
 </body>
 </html>
