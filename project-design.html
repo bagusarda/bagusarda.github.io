@@ -1,1 +1,955 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design | Bagus Arda</title>
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <style>
+        .swiper{
+            width:100%;
+            padding-top:20px;
+            padding-bottom:40px;
+        }
+
+        .swiper-slide{
+            background-position:center;
+            background-size:cover;
+            width:320px;
+            height:220px;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 25px 50px -12px rgba(0,0,0,.5);
+        }
+
+        .swiper-pagination-bullet-active{
+            background:#2dd4bf !important;
+        }
+    </style>
+
+</head>
+
+<body class="bg-slate-900 text-slate-100">
+
+<!-- ====================================================== -->
+<!-- HEADER -->
+<!-- ====================================================== -->
+
+<header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-5 md:p-4">
+
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between justify-center min-h-[4rem] py-3 md:py-0">
+
+        <div class="flex items-center justify-between w-full md:w-auto">
+
+            <a href="index.html#projects"
+               class="text-sm font-bold text-teal-400 hover:underline flex items-center gap-1">
+
+                Home
+
+            </a>
+
+            <button onclick="toggleNavbarMenu()"
+                    class="md:hidden text-teal-400 font-black text-sm tracking-wider flex items-center gap-1">
+
+                GRAPHIC DESIGN
+
+                <svg id="dropdown-arrow"
+                     class="w-4 h-4 transition-transform duration-200"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7">
+                    </path>
+
+                </svg>
+
+            </button>
+
+        </div>
+
+        <nav id="navbar-menu"
+             class="hidden md:flex flex-col md:flex-row items-left md:items-center gap-4 md:space-x-5 text-xs font-bold text-slate-300 mt-4 md:mt-0 bg-slate-800/90 md:bg-transparent p-4 md:p-0 rounded-lg border border-slate-700 md:border-none shadow-xl md:shadow-none w-full md:w-auto">
+
+            <a href="#poster" class="hover:text-teal-400">Poster</a>
+
+            <a href="#lanyard" class="hover:text-teal-400">Lanyard</a>
+
+            <a href="#book" class="hover:text-teal-400">Book Cover</a>
+
+            <a href="#print" class="hover:text-teal-400">Print Design</a>
+
+            <a href="#marker" class="hover:text-teal-400">Marker</a>
+
+            <a href="#packaging" class="hover:text-teal-400">Packaging</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ====================================================== -->
+<!-- MAIN -->
+<!-- ====================================================== -->
+
+<div class="max-w-4xl mx-auto p-5 md:p-10">
+
+<!-- ====================================================== -->
+<!-- HERO -->
+<!-- ====================================================== -->
+
+<section class="mb-10">
+
+    <h1 class="text-5xl font-extrabold text-teal-400 mb-5">
+
+        Graphic Design Portfolio
+
+    </h1>
+
+    <p class="text-slate-300 leading-relaxed text-lg">
+
+        A collection of visual communication works created for academic,
+        organizational, and community projects. This portfolio showcases
+        posters, print media, branding materials, packaging concepts,
+        AR marker designs, and publication layouts developed using
+        CorelDRAW, Adobe Photoshop, and Canva.
+
+    </p>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- POSTER -->
+<!-- ====================================================== -->
+
+<section id="poster"
+         class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl">
+
+    <!-- CAROUSEL -->
+
+    <div class="swiper mySwiper mb-8">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/poster1.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/poster2.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/poster3.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/poster4.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <!-- TITLE -->
+
+    <h2 class="text-4xl font-extrabold text-teal-400 mb-6">
+
+        Poster Design
+
+    </h2>
+
+    <!-- DESCRIPTION -->
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+
+        A collection of promotional and informational posters designed
+        for academic events, organizational activities, competitions,
+        and public campaigns. Each layout emphasizes visual hierarchy,
+        readability, and modern composition to effectively communicate
+        information while maintaining an attractive appearance.
+
+    </p>
+
+    <!-- GRID -->
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+
+                Design Focus
+
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>Event Promotion</li>
+
+                <li>Educational Posters</li>
+
+                <li>Competition Posters</li>
+
+                <li>Social Campaigns</li>
+
+                <li>Digital Publication</li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+
+                Software
+
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>CorelDRAW</li>
+
+                <li>Adobe Photoshop</li>
+
+                <li>Canva</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- ANALYSIS -->
+
+    <div class="border-t border-slate-700 pt-6">
+
+        <h3 class="text-xl font-bold text-teal-400 mb-3">
+
+            Project Overview
+
+        </h3>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+
+            These poster designs were created with a focus on balancing
+            typography, color harmony, and visual composition. Every
+            project begins with identifying the communication objective,
+            selecting an appropriate layout structure, and applying
+            supporting graphic elements to ensure the final design is
+            both informative and visually engaging across print and
+            digital media.
+
+        </p>
+
+    </div>
+
+</section>
+
+  <!-- ====================================================== -->
+<!-- LANYARD & ID CARD -->
+<!-- ====================================================== -->
+
+<section id="lanyard"
+         class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+
+    <!-- CAROUSEL -->
+
+    <div class="swiper mySwiper mb-8">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/lanyard1.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/lanyard2.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/lanyard3.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-teal-400 mb-6">
+        Lanyard & ID Card Design
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+        A collection of lanyard and identification card designs created
+        for seminars, organizational events, committees, and academic
+        activities. Each design maintains consistent branding while
+        ensuring readability and professional visual identity.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Design Focus
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+                <li>Event Identity</li>
+                <li>Committee ID Card</li>
+                <li>Participant Card</li>
+                <li>Corporate Branding</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Software
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+                <li>CorelDRAW</li>
+                <li>Adobe Photoshop</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 pt-6">
+
+        <h3 class="text-xl font-bold text-teal-400 mb-3">
+            Project Overview
+        </h3>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+            The designs emphasize clean layouts, strong typography,
+            color consistency, and clear information hierarchy to
+            ensure quick identification while reinforcing the visual
+            identity of each event or organization.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- BOOK COVER -->
+<!-- ====================================================== -->
+
+<section id="book"
+         class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+
+    <!-- CAROUSEL -->
+
+    <div class="swiper mySwiper mb-8">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/book1.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/book2.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/book3.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/book4.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-teal-400 mb-6">
+        Book Cover Design
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+        Book cover and publication layout projects designed for
+        educational materials, modules, and printed publications.
+        The work combines typography, illustration, and composition
+        to create visually appealing and informative covers.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Design Focus
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+                <li>Front Cover</li>
+                <li>Back Cover</li>
+                <li>Book Layout</li>
+                <li>Publication Design</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Software
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+                <li>CorelDRAW</li>
+                <li>Adobe Photoshop</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 pt-6">
+
+        <h3 class="text-xl font-bold text-teal-400 mb-3">
+            Project Overview
+        </h3>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+            Every publication was developed through concept planning,
+            typography selection, visual hierarchy arrangement, and
+            color exploration to produce attractive printed media
+            while maintaining readability and professional quality.
+        </p>
+
+    </div>
+
+</section>
+
+  <!-- ====================================================== -->
+<!-- PRINT DESIGN -->
+<!-- ====================================================== -->
+
+<section id="print"
+         class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+
+    <!-- CAROUSEL -->
+
+    <div class="swiper mySwiper mb-8">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/print1.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/print2.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/print3.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/print4.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/print5.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-teal-400 mb-6">
+        Print Design
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+
+        A collection of large-format print media designed for community
+        service activities, organizational events, and educational
+        institutions. The projects include banners, stage backdrops,
+        signboards, information boards, and organizational displays.
+
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Design Focus
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>Event Banner</li>
+
+                <li>Stage Backdrop</li>
+
+                <li>Signboard Design</li>
+
+                <li>Information Board</li>
+
+                <li>Organization Display</li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Software
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>CorelDRAW</li>
+
+                <li>Adobe Photoshop</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 pt-6">
+
+        <h3 class="text-xl font-bold text-teal-400 mb-3">
+            Project Overview
+        </h3>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+
+            These works were produced for real implementation during
+            community service programs (KKN), educational activities,
+            and organizational events. Every design was prepared with
+            print-ready specifications, including bleed, color accuracy,
+            and large-scale layout adjustments to ensure optimal output
+            after production.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- MARKER DESIGN -->
+<!-- ====================================================== -->
+
+<section id="marker"
+         class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+
+    <!-- CAROUSEL -->
+
+    <div class="swiper mySwiper mb-8">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/marker1.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/marker2.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+
+                <div class="swiper-zoom-container">
+
+                    <img src="Assets/graphic/marker3.jpg"
+                         class="w-full h-full object-cover">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-teal-400 mb-6">
+        Augmented Reality Marker Design
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+
+        Marker designs developed specifically for Augmented Reality
+        applications. Each marker was created with consideration for
+        feature-point density, contrast, and tracking stability to
+        improve object recognition accuracy inside Unity and Vuforia.
+
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Design Focus
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>AR Marker</li>
+
+                <li>Image Target</li>
+
+                <li>Educational Media</li>
+
+                <li>Pattern Optimization</li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Software
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>CorelDRAW</li>
+
+                <li>Unity Engine</li>
+
+                <li>Vuforia Engine</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 pt-6">
+
+        <h3 class="text-xl font-bold text-teal-400 mb-3">
+            Project Overview
+        </h3>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+
+            The marker designs were produced as supporting assets for
+            Android-based educational applications. High-contrast
+            patterns and distinctive visual features were intentionally
+            incorporated to maximize recognition performance while
+            maintaining an attractive visual appearance.
+
+        </p>
+
+    </div>
+
+</section>
+
+  <!-- ====================================================== -->
+<!-- PACKAGING DESIGN -->
+<!-- ====================================================== -->
+
+<section id="packaging"
+         class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+
+    <!-- CAROUSEL -->
+
+    <div class="swiper mySwiper mb-8">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/package1.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/package2.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/package3.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-slide border border-slate-600">
+                <div class="swiper-zoom-container">
+                    <img src="Assets/graphic/package4.jpg"
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-teal-400 mb-6">
+        Packaging Design
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed mb-8">
+
+        Packaging concepts created for food products, creative products,
+        and branding purposes. The designs combine visual appeal,
+        functionality, and brand identity to produce packaging that is
+        attractive while remaining informative.
+
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Design Focus
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>Food Packaging</li>
+
+                <li>Brand Identity</li>
+
+                <li>Product Label</li>
+
+                <li>Mockup Presentation</li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3 class="text-xl font-bold text-teal-400 mb-3">
+                Software
+            </h3>
+
+            <ul class="list-disc list-inside text-slate-300 space-y-2">
+
+                <li>CorelDRAW</li>
+
+                <li>Adobe Photoshop</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 pt-6">
+
+        <h3 class="text-xl font-bold text-teal-400 mb-3">
+            Project Overview
+        </h3>
+
+        <p class="text-slate-300 text-sm leading-relaxed">
+
+            Each packaging project was developed through concept
+            exploration, color studies, typography selection, and
+            product mockup visualization. The final result aims to
+            strengthen product branding while maintaining practicality
+            for real-world production.
+
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- SWIPER JS -->
+<!-- ====================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+document.querySelectorAll(".mySwiper").forEach((el)=>{
+
+    new Swiper(el,{
+
+        effect:"creative",
+
+        grabCursor:true,
+
+        centeredSlides:true,
+
+        slidesPerView:"auto",
+
+        loop:false,
+
+        zoom:true,
+
+        creativeEffect:{
+
+            prev:{
+                shadow:true,
+                translate:["-85%",0,-200],
+                opacity:.3
+            },
+
+            next:{
+                shadow:true,
+                translate:["85%",0,-200],
+                opacity:.3
+            }
+
+        },
+
+        pagination:{
+            el:el.querySelector(".swiper-pagination"),
+            clickable:true
+        }
+
+    });
+
+});
+
+</script>
+
+<!-- ====================================================== -->
+<!-- MOBILE NAVBAR -->
+<!-- ====================================================== -->
+
+<script>
+
+function toggleNavbarMenu(){
+
+    if(window.innerWidth < 768){
+
+        const menu=document.getElementById("navbar-menu");
+
+        const arrow=document.getElementById("dropdown-arrow");
+
+        menu.classList.toggle("hidden");
+
+        menu.classList.toggle("flex");
+
+        arrow.classList.toggle("rotate-180");
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
