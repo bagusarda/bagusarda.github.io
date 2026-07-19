@@ -200,29 +200,32 @@
     <!-- Swiper.js Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "creative",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            loop: false,
-            zoom: true,
-            creativeEffect: {
-                prev: {
-                    shadow: true,
-                    translate: ["-85%", 0, -200], 
-                    opacity: 0.3,
+        // Pakai querySelectorAll biar semua elemen dengan class .mySwiper otomatis ke-detect
+        document.querySelectorAll(".mySwiper").forEach((el) => {
+            new Swiper(el, {
+                effect: "creative",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: false,
+                zoom: true,
+                creativeEffect: {
+                    prev: {
+                        shadow: true,
+                        translate: ["-85%", 0, -200], 
+                        opacity: 0.3,
+                    },
+                    next: {
+                        shadow: true,
+                        translate: ["85%", 0, -200], 
+                        opacity: 0.3,
+                    },
                 },
-                next: {
-                    shadow: true,
-                    translate: ["85%", 0, -200], 
-                    opacity: 0.3,
+                pagination: {
+                    el: el.querySelector(".swiper-pagination"), // Nyari pagination di masing-masing box proyek
+                    clickable: true,
                 },
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+            });
         });
     </script>
 </body>
