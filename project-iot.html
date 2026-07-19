@@ -31,27 +31,27 @@
 </head>
 <body class="bg-slate-900 text-slate-100">
 
-    <!-- ====== HEADER / NAVBAR SECTION ====== -->
+    <!-- ====== HEADER / NAVBAR KHUSUS PROYEK IOT ====== -->
     <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 px-5 md:p-4">
         <div class="max-w-4xl mx-auto flex items-center justify-between h-16">
-            <!-- Brand / Logo -->
-            <a href="index.html" class="text-xl font-black tracking-wider text-teal-400 hover:opacity-80 transition-all">
-                BAGUS ARDA.
+            <!-- Tombol Balik ke Home Utama -->
+            <a href="index.html#projects" class="text-sm font-bold text-teal-400 hover:underline flex items-center gap-1">
+                ← Back
             </a>
             
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-300">
-                <a href="index.html#about" class="hover:text-teal-400 transition-colors">About</a>
-                <a href="index.html#education" class="hover:text-teal-400 transition-colors">Education</a>
-                <a href="index.html#experience" class="hover:text-teal-400 transition-colors">Experience</a>
-                <a href="index.html#pelatihan" class="hover:text-teal-400 transition-colors">Pelatihan</a>
-                <a href="index.html#sertifikasi" class="hover:text-teal-400 transition-colors">Sertifikasi</a>
-                <a href="index.html#projects" class="text-teal-400 border-b-2 border-teal-400 pb-1">Projects</a>
+            <!-- Navigasi Internal Lompat Antar Proyek IoT -->
+            <nav class="hidden md:flex items-center space-x-5 text-xs font-bold text-slate-300">
+                <a href="#smarthome" class="hover:text-teal-400 transition-colors">Smart Home</a>
+                <a href="#soil" class="hover:text-teal-400 transition-colors">Soil Moisture</a>
+                <a href="#led" class="hover:text-teal-400 transition-colors">LED Actuation</a>
+                <a href="#dht11" class="hover:text-teal-400 transition-colors">DHT11 Climate</a>
+                <a href="#rgb" class="hover:text-teal-400 transition-colors">RGB PWM</a>
+                <a href="#ultrasonic" class="hover:text-teal-400 transition-colors">Ultrasonic</a>
             </nav>
 
-            <!-- Mobile Menu Indicator (Optional Icon Only) -->
-            <div class="md:hidden text-teal-400 font-bold text-sm">
-                Projects
+            <!-- Penanda Halaman Pas di Mobile -->
+            <div class="md:hidden text-teal-400 font-black text-sm tracking-wider">
+                IoT PROJECTS
             </div>
         </div>
     </header>
@@ -59,7 +59,8 @@
     <!-- ====== MAIN CONTAINER ====== -->
     <div class="max-w-4xl mx-auto p-5 md:p-10">
         
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl">
+        <!-- PROYEK 1 -->
+        <div id="smarthome" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
@@ -140,7 +141,7 @@
         </div>
 
         <!-- ====== PROYEK 2: MONITORING KELEMBAPAN TANAH ====== -->
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+        <div id="soil" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
                 
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
@@ -222,7 +223,7 @@
         </div>
 
         <!-- ====== PROYEK 3: KOMPARASI KONTROL LED VIA WEB SERVER, BLYNK, & ADAFRUIT ====== -->
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+        <div id="led" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
@@ -287,7 +288,7 @@
             <div class="border-t border-slate-700 pt-6 mt-6">
                 <h2 class="text-xl font-bold text-teal-400 mb-3">Alur Kerja & Hasil Analisis Komparasi:</h2>
                 <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                    Pada pengujian Local Web Server, kendali dilakukan dengan memproses string request pada header HTTP ketika tombol diclick. Sistem ini andal tanpa ketergantungan internet luar, namun terbatas pada cakupan area Wi-Fi lokal. Sementara pada pengujian Blynk IoT, transisi data memanfaatkan pustaka Blynk untuk sinkronisasi state pin digital secara real-time and interaktif via aplikasi mobile.
+                    Pada pengujian Local Web Server, kendali dilakukan dengan memproses string request pada header HTTP ketika tombol diclick. Sistem ini andal tanpa ketergantungan internet luar, namun terbatas pada cakupan area Wi-Fi lokal. Sementara pada pengujian Blynk IoT, transisi data memanfaatkan pustaka Blynk untuk sinkronisasi state pin digital secara real-time dan interaktif via aplikasi mobile.
                 </p>
                 <p class="text-slate-300 text-sm leading-relaxed">
                     Untuk efisiensi data tertinggi, protokol MQTT via Adafruit IO terbukti paling optimal. Wemos cukup melakukan subscribe ke satu feed terpusat (/feeds/LED). Ketika toggle switch pada dashboard Adafruit diubah, broker langsung mendorong data payload pendek ("ON" / "OFF"), menghasilkan latensi waktu respon aktual yang sangat minim dibandingkan metode HTTP request biasa.
@@ -296,7 +297,7 @@
         </div>
 
         <!-- ====== PROYEK 4: MULTI-PLATFORM ENVIRONMENTAL MONITORING (DHT11) ====== -->
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+        <div id="dht11" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
@@ -370,7 +371,7 @@
         </div>
 
         <!-- ====== PROYEK 5: KONTROL WARNA LED RGB VIA BLYNK IOT (PWM) ====== -->
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+        <div id="rgb" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
@@ -451,7 +452,7 @@
         </div>
 
         <!-- ====== PROYEK 6: ULTRASONIC RANGE METER VIA BLYNK IOT ====== -->
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+        <div id="ultrasonic" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
             <div class="swiper mySwiper mb-8">
