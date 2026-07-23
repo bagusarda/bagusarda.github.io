@@ -67,7 +67,77 @@
     <!-- ====== MAIN CONTAINER ====== -->
     <div class="max-w-4xl mx-auto p-5 md:p-10">
         
-        <!-- PROYEK 1 -->
+        <!-- ====== PROYEK 1: 3-PHASE PANEL MONITORING ====== -->
+        <div id="wattmeter" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
+            
+            <!-- ====== STACKED CAROUSEL SECTION ====== -->
+            <div class="swiper mySwiper mb-8">
+                <div class="swiper-wrapper">
+                    <!-- Gambar 1 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/watt1.jpg" alt="Instalasi Panel 3 Fasa" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 2 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/watt2.jpg" alt="Dashboard SIBUKIN" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- Gambar 3 -->
+                    <div class="swiper-slide border border-slate-600">
+                        <div class="swiper-zoom-container">
+                            <img src="Assets/watt3.jpg" alt="Pemasangan" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Titik Navigasi -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- ====================================== -->
+
+            <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Industrial 3-Phase Power Monitoring IoT Panel (BLKPP DIY)</h1>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+                Proyek integrasi dan perakitan panel pemantauan kelistrikan 3 fasa skala industri untuk fasilitas BLKPP DIY. Sistem ini dirancang untuk membaca penggunaan daya, tegangan, dan arus secara akurat dari panel utama ruangan yang sudah ada, kemudian mendistribusikan data tersebut secara lokal maupun remote (IoT).
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Fitur Sistem:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Pengukuran parameter 3 fasa (V, I, P) secara komprehensif.</li>
+                        <li>Monitoring lokal *real-time* via LCD Multiple Electric Meter.</li>
+                        <li>Transmisi data telemetri ke custom dashboard (iot.sibukin.com).</li>
+                        <li>Integrasi *non-intrusive* menggunakan Current Transformer (CT) bawaan ruangan.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-teal-400 mb-3">Komponen & Tech Stack:</h2>
+                    <ul class="list-disc list-inside text-slate-300 space-y-1">
+                        <li>Data Communication: Modbus USR-DR134 (RS485 to Ethernet)</li>
+                        <li>Measurement: LCD Multiple Electric Meter & Current Transformer (CT)</li>
+                        <li>Power Supply: PSU HD-15-12 (12V)</li>
+                        <li>Platform: Custom Dashboard (iot.sibukin.com)</li>
+                        <li>Hardware: Terminal block, Casing box, Kabel & Skun</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ====== DETAIL PENGUJIAN & ANALISIS ====== -->
+            <div class="border-t border-slate-700 pt-6 mt-6">
+                <h2 class="text-xl font-bold text-teal-400 mb-3">Implementasi Jaringan & Komunikasi Data:</h2>
+                <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                    Keberhasilan sistem ini bergantung pada akuisisi data yang presisi. Arus AC tinggi dari listrik 3 fasa diturunkan secara proporsional oleh Current Transformer (CT) yang terpasang di panel ruangan agar dapat dibaca dengan aman oleh LCD Multiple Electric Meter. Proses <i>wiring</i> menggunakan terminal block dan skun kabel memastikan koneksi standar industri yang aman dan minim <i>noise</i>.
+                </p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Untuk menjembatani instrumen lokal dengan ekosistem IoT, Modbus USR-DR134 diimplementasikan sebagai <i>gateway</i>. Perangkat ini mengonversi protokol Modbus RTU/RS485 dari meteran listrik menjadi paket data TCP/IP. Data kelistrikan ini kemudian dipublikasikan ke server <i>iot.sibukin.com</i>, memungkinkan staf BLKPP DIY memantau fluktuasi beban listrik 3 fasa di 3 ruangan berbeda secara terpusat.
+                </p>
+            </div>
+        </div>
+        
+        <!-- PROYEK 2 smart home -->
         <div id="smarthome" class="scroll-mt-24 bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl">
             
             <!-- ====== STACKED CAROUSEL SECTION ====== -->
@@ -112,7 +182,7 @@
             <h1 class="text-4xl font-extrabold text-teal-400 mb-6">Smart Home IoT: Voice Control & Energy Monitoring</h1>
             <p class="text-slate-300 mb-6 leading-relaxed">
                 Sistem otomatisasi rumah pintar berbasis Internet of Things (IoT) yang memungkinkan kontrol lampu via <strong>Google Voice Assistant</strong>. 
-                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik *real-time* untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan kombinasi sensor ZMPT101B dan ACS712.
+                Selain kontrol suara, sistem ini dilengkapi fitur monitoring daya listrik <i>real-time</i> untuk memantau penggunaan arus, tegangan, dan daya (Watt) secara akurat menggunakan kombinasi sensor ZMPT101B dan ACS712.
             </p>
             
             <div class="grid md:grid-cols-2 gap-6 mb-8">
