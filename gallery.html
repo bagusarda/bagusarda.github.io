@@ -304,7 +304,7 @@
             <div class="flex justify-end mt-5">
 
                 <button
-                    onclick="toggleGallery('pk-more',this)"
+                    onclick="toggleGallery('pro-more',this)"
                     class="text-teal-400 hover:text-teal-300 font-semibold">
 
                     Lihat Selengkapnya...
@@ -316,6 +316,25 @@
         </section>
 
     </div>
+
+    <script>
+
+    function toggleGallery(id, button){
+    
+        const gallery = document.getElementById(id);
+    
+        gallery.classList.toggle("hidden");
+    
+        if(gallery.classList.contains("hidden")){
+            button.innerHTML = "Lihat Selengkapnya...";
+        } else {
+            button.innerHTML = "Sembunyikan...";
+        }
+    
+    }
+    
+    </script>
+    
 </body>
 </html>
         
