@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,6 +65,7 @@
                 Pelatihan di BLKPP DIY
             </h2>
 
+            <!-- Preview -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
                 <img src="galeri/blk1.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
@@ -76,9 +78,47 @@
 
             </div>
 
+            <!-- Foto Tambahan -->
+            <div id="blkpp-more" class="hidden mt-4">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                    <img src="galeri/blk5.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk6.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk7.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk8.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk9.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk10.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk11.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/blk12.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                </div>
+
+            </div>
+
+            <!-- Tombol -->
+            <div class="flex justify-end mt-5">
+
+                <button
+                    onclick="toggleGallery('blkpp-more',this)"
+                    class="text-teal-400 hover:text-teal-300 font-semibold">
+
+                    Lihat Selengkapnya...
+
+                </button>
+
+            </div>
+
         </section>
 
-        <!-- ====================================================== -->
+                <!-- ====================================================== -->
         <!-- PRAKTIK INDUSTRI -->
         <!-- ====================================================== -->
 
@@ -88,6 +128,7 @@
                 Praktik Industri
             </h2>
 
+            <!-- Preview -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
                 <img src="galeri/pkl1.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
@@ -100,10 +141,47 @@
 
             </div>
 
+            <!-- Hidden Gallery -->
+            <div id="pkl-more" class="hidden mt-4">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                    <img src="galeri/pkl5.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl6.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl7.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl8.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl9.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl10.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl11.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pkl12.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                </div>
+
+            </div>
+
+            <div class="flex justify-end mt-5">
+
+                <button
+                    onclick="toggleGallery('pkl-more',this)"
+                    class="text-teal-400 hover:text-teal-300 font-semibold">
+
+                    Lihat Selengkapnya...
+
+                </button>
+
+            </div>
+
         </section>
 
         <!-- ====================================================== -->
-        <!-- PK -->
+        <!-- PRAKTIK KEPENDIDIKAN -->
         <!-- ====================================================== -->
 
         <section class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
@@ -112,6 +190,7 @@
                 Praktik Kependidikan
             </h2>
 
+            <!-- Preview -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
                 <img src="galeri/pk1.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
@@ -124,33 +203,119 @@
 
             </div>
 
+            <!-- Hidden Gallery -->
+            <div id="pk-more" class="hidden mt-4">
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                    <img src="galeri/pk5.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk6.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk7.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk8.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk9.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk10.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk11.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                    <img src="galeri/pk12.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+
+                </div>
+
+            </div>
+
+            <div class="flex justify-end mt-5">
+
+                <button
+                    onclick="toggleGallery('pk-more',this)"
+                    class="text-teal-400 hover:text-teal-300 font-semibold">
+
+                    Lihat Selengkapnya...
+
+                </button>
+
+            </div>
+
         </section>
 
         <!-- ====================================================== -->
-        <!-- PROYEK -->
+        <!-- PENGERJAAN PROYEK -->
         <!-- ====================================================== -->
-
+        
         <section class="bg-slate-800 p-8 rounded-xl border border-slate-700 shadow-2xl mt-10">
-
+        
             <h2 class="text-2xl font-bold text-teal-400 mb-6">
                 Pengerjaan Proyek
             </h2>
-
+        
+            <!-- Galeri Awal -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+                <img src="galeri/pro1.jpg"
+                     class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+        
+                <img src="galeri/pro2.jpg"
+                     class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+        
+                <img src="galeri/pro3.jpg"
+                     class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+        
+                <img src="galeri/pro4.jpg"
+                     class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+        
+            </div>
+            <!-- Galeri Tambahan -->
+            <div id="pro-more" class="hidden mt-4">
+            
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            
+                    <img src="galeri/pro5.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro6.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro7.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro8.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro9.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro10.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro11.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                    <img src="galeri/pro12.jpg"
+                         class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            
+                </div>
+            
+            </div>
 
-                <img src="galeri/pro1.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+            <div class="flex justify-end mt-5">
 
-                <img src="galeri/pro2.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+                <button
+                    onclick="toggleGallery('pk-more',this)"
+                    class="text-teal-400 hover:text-teal-300 font-semibold">
 
-                <img src="galeri/pro3.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+                    Lihat Selengkapnya...
 
-                <img src="galeri/pro4.jpg" class="aspect-[4/3] w-full object-cover rounded-lg border border-slate-700 hover:scale-105 transition duration-300">
+                </button>
 
             </div>
 
         </section>
 
     </div>
-
 </body>
 </html>
+        
